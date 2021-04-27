@@ -2,7 +2,7 @@ import random
 
 def escondendo():
     portas = []
-    premio = ["Carro", "Esterco", "Titica de galinha"]
+    premio = ["Carro", "Nada", "Pão"]
     while len(portas) < 3:
         aux = random.choice(premio)
         portas.append(aux)        
@@ -23,21 +23,21 @@ def escolhas_pessoal(portas):
     for i in portas:
         if i == "Carro":
             porta_premio = aux
-        elif i == "Esterco":
-            porta_esterco = aux
+        elif i == "Nada":
+            porta_nada = aux
         else:
-            porta_titica = aux
+            porta_pao = aux
         aux += 1
-    if escolha == porta_esterco:
-        print("Na porta", porta_titica, "temos: Titica de Galinha")
-    elif escolha == porta_titica:
-        print("Na porta", porta_esterco, "temos: Esterco")
+    if escolha == porta_nada:
+        print("Na porta", porta_pao, "temos: Pão")
+    elif escolha == porta_pao:
+        print("Na porta", porta_nada, "temos: Nada")
     else:
-        aux = random.choice([porta_esterco, porta_titica])
-        if aux == porta_esterco:
-            aux1 = "Esterco"
+        aux = random.choice([porta_esterco, porta_pao])
+        if aux == porta_nada:
+            aux1 = "Nada"
         else:
-            aux1 = "Titica de galinha"
+            aux1 = "Pão"
         print("Na porta", aux, "temos", aux1)
         
 
